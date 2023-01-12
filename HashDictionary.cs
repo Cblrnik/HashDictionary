@@ -43,7 +43,7 @@ namespace Lab14
             var firstFilePath = pathToBlocks + $"\\{1}.txt";
             if (!Directory.Exists(pathToBlocks) || !File.Exists(firstFilePath))
             {
-                return "Такого значения несуществует в словаре";
+                return "Такого значения не существует в словаре";
             }
 
             return SearchFromFile(haskKey, value, firstFilePath);
@@ -65,7 +65,7 @@ namespace Lab14
                     return SearchFromFile(hashKey, value, lines[^1]);
                 }
 
-                return "Такого значения несуществует в словаре";
+                return "Такого значения не существует в словаре";
             }
         }
 
@@ -183,7 +183,6 @@ namespace Lab14
             }
 
             var hashKey = validHash  % _dictionary.Count + 1;
-            Console.WriteLine(hashKey);
             return hashKey;
         }
     }

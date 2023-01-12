@@ -13,13 +13,12 @@ namespace Lab14
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             CreateDefaultSettings();
 
             var dictionary = CreateDictionary();
             dictionary.AddValue("SomeAwesome Value");
-            dictionary.SearchValue("SomeAwesome Value");
-            dictionary.SearchValue("CreateDictionary");
+            Console.WriteLine(dictionary.SearchValue("SomeAwesome Value"));
+            Console.WriteLine(dictionary.SearchValue("Test Value"));
             dictionary.DeleteValue("SomeAwesome Value");
         }
 
